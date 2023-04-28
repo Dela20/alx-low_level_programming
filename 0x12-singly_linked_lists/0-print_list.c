@@ -7,23 +7,25 @@
  *
  * Return: number of nodes in h
  */
-
 size_t print_list(const list_t *h)
 {
-	int n=0;
+	int nodes = 0;
 
-	for (h != NULL; n++)
+	while (h != NULL)
 	{
-		if (h -> str == NULL)
+		if (h->str == NULL)
 		{
-			printf("[%d} %s\n", 0, "(nil)");
-			h = h -> next;
+			printf("[%d] %s\n", 0, "(nil)");
+			nodes++;
+			h = h->next;
 		}
 		else
 		{
-			printf("[%d]" %s\n", h ->len, h ->str);
-			h = h ->next;
+			printf("[%d] %s\n", h->len, h->str);
+			nodes++;
+			h = h->next;
 		}
 	}
-	return (n);
-}			
+
+	return (nodes);
+}
